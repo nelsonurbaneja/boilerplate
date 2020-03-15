@@ -1,0 +1,27 @@
+include ../components/_mixins
+block config
+  include _variables
+
+doctype html
+html(lang="es")
+  head
+    title=pageTitle
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1, width=device-width user-scalable=no")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:site" content=twitterAccount)
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:type" content="website")
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:image" content=pageImage)
+    //- Facebook comments
+    //- .div#fb-root
+    //- script(async defer crossorigin = "anónimo" src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0")
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href=`${rutaCss}/style.css`)
+    link(rel="shortcut icon" href=`${rutaImg}/favicon.ico`)
+    
+    
+  body
+    block content
+    script(src=`${rutaJs}/script.js`)

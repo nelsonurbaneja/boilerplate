@@ -1,0 +1,7 @@
+mixin banner(imgBanner,logo,title,subtitle) 
+    div.main-banner
+        img.banner-imagen(src=imgBanner, alt="imagen-banner-fondo")
+        div.main-banner__content
+            img.main-banner__logo(src=logo, alt=title)
+            h1.main-banner__title=title
+            p.main-banner__subtitle=subtitle

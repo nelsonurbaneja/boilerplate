@@ -1,0 +1,9 @@
+- let pages = ['Conferencias','Workshops','Expositores']
+header.main-header.l-container
+  a(href="index.html").a-logo: img.main-header__logo(src=`${rutaImg}/logo.svg`, alt="Logo de EDteam")
+  div.main-toggle#main-toggle
+  ul.main-header__menu#main-menu
+    each page in pages
+      li.main-header__item: a(href=`${page.toLowerCase()}.html`).main-header__link=page
+    else
+      li.main-header__item.main-header__link Menu en mantenimiento.
